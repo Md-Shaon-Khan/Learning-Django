@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% block title %}Home &bull; Shaon's Custom Cycles{% endblock title %}
+
+{% block body %}
+<!-- 1. Hero / Jumbotron Section -->
+<div class="position-relative py-5 border-bottom border-secondary overflow-hidden" 
+     style="background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.95)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;">
+  <div class="container py-5 text-center">
+    <span class="badge border border-warning text-warning px-3 py-2 text-uppercase mb-3" style="letter-spacing: 2px;">
+      <i class="bi bi-shield-shaded me-1"></i> Handcrafted In Dhaka &bull; Est. 1974
+    </span>
+    <h1 class="display-3 fw-bold text-light mb-3">Steel, Speed &amp; Heritage</h1>
+    <p class="fs-5 text-secondary col-md-8 mx-auto mb-4" style="color: #c9c0b5 !important;">
+      We rescue, rebuild, and re-engineer vintage motorcycles into raw, high-performance machines built for the open road.
+    </p>
+    <div class="d-inline-flex gap-3 justify-content-center flex-wrap">
+      <a href="#featured-builds" class="btn btn-retro-brass btn-lg px-4 py-2">
+        <i class="bi bi-speedometer2 me-2"></i>Explore Builds
+      </a>
+      <a href="/contact" class="btn btn-retro-outline btn-lg px-4 py-2">
+        Book A Consultation
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <!-- 2. Fast Stat Badges -->
+  <div class="row g-4 text-center mb-5 pb-3">
+    <div class="col-6 col-md-3">
+      <div class="p-4 rounded-3 border border-secondary" style="background-color: #1a1a1a;">
+        <h2 class="display-5 fw-bold text-warning mb-1">120+</h2>
+        <span class="small text-uppercase text-light" style="letter-spacing: 1px;">Custom Builds</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="p-4 rounded-3 border border-secondary" style="background-color: #1a1a1a;">
+        <h2 class="display-5 fw-bold text-warning mb-1">50</h2>
+        <span class="small text-uppercase text-light" style="letter-spacing: 1px;">Years Heritage</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="p-4 rounded-3 border border-secondary" style="background-color: #1a1a1a;">
+        <h2 class="display-5 fw-bold text-warning mb-1">100%</h2>
+        <span class="small text-uppercase text-light" style="letter-spacing: 1px;">Hand-Fabricated</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="p-4 rounded-3 border border-secondary" style="background-color: #1a1a1a;">
+        <h2 class="display-5 fw-bold text-warning mb-1">24/7</h2>
+        <span class="small text-uppercase text-light" style="letter-spacing: 1px;">Rider Support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Featured Builds Showcase -->
+  <div id="featured-builds" class="pt-2 mb-5">
+    <div class="d-flex justify-content-between align-items-end mb-4 border-bottom border-secondary pb-3 flex-wrap gap-2">
+      <div>
+        <span class="text-warning text-uppercase small" style="letter-spacing: 2px;">The Showroom</span>
+        <h2 class="display-6 fw-bold text-light mb-0">Featured Machines</h2>
+      </div>
+      <a href="/services" class="btn btn-retro-outline btn-sm px-3">View All Builds &rarr;</a>
+    </div>
+
+    <div class="row g-4">
+      <!-- Build 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="rounded-3 border border-secondary overflow-hidden h-100 d-flex flex-column" style="background-color: #1c1c1c;">
+          <div class="position-relative overflow-hidden" style="height: 240px;">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=80" alt="Iron Ghost CB750" class="w-100 h-100 object-fit-cover">
+            <span class="badge border border-warning text-warning position-absolute top-0 end-0 m-3" style="background-color: rgba(20,20,20,0.85);">Café Racer</span>
+          </div>
+          <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="text-light mb-2">The Iron Ghost</h4>
+              <p class="small text-secondary mb-3" style="color: #b5ada3 !important;">
+                A rebuilt 1978 inline-four stripped of excess weight, fitted with inverted forks, clip-on bars, and dual megaphone exhausts.
+              </p>
+              <div class="d-flex gap-2 flex-wrap mb-4">
+                <span class="badge bg-dark border border-secondary text-light">750cc</span>
+                <span class="badge bg-dark border border-secondary text-light">Keihin Carbs</span>
+                <span class="badge bg-dark border border-secondary text-light">Leather Saddle</span>
+              </div>
+            </div>
+            <a href="/contact" class="btn btn-retro-brass w-100 py-2">Inquire Build</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="rounded-3 border border-secondary overflow-hidden h-100 d-flex flex-column" style="background-color: #1c1c1c;">
+          <div class="position-relative overflow-hidden" style="height: 240px;">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=700&q=80" alt="Mud Hound Scrambler" class="w-100 h-100 object-fit-cover">
+            <span class="badge border border-warning text-warning position-absolute top-0 end-0 m-3" style="background-color: rgba(20,20,20,0.85);">Desert Sled</span>
+          </div>
+          <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="text-light mb-2">Dust &amp; Brimstone</h4>
+              <p class="small text-secondary mb-3" style="color: #b5ada3 !important;">
+                High-clearance scrambler engineered for both broken urban pavement and dusty gravel paths. Features high-mount scrambler pipes.
+              </p>
+              <div class="d-flex gap-2 flex-wrap mb-4">
+                <span class="badge bg-dark border border-secondary text-light">650cc Twin</span>
+                <span class="badge bg-dark border border-secondary text-light">Knobby Tires</span>
+                <span class="badge bg-dark border border-secondary text-light">Skid Plate</span>
+              </div>
+            </div>
+            <a href="/contact" class="btn btn-retro-brass w-100 py-2">Inquire Build</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Build 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="rounded-3 border border-secondary overflow-hidden h-100 d-flex flex-column" style="background-color: #1c1c1c;">
+          <div class="position-relative overflow-hidden" style="height: 240px;">
+            <img src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&w=700&q=80" alt="Blackout Bobber" class="w-100 h-100 object-fit-cover">
+            <span class="badge border border-warning text-warning position-absolute top-0 end-0 m-3" style="background-color: rgba(20,20,20,0.85);">Bobber</span>
+          </div>
+          <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="text-light mb-2">Midnight Rebel</h4>
+              <p class="small text-secondary mb-3" style="color: #b5ada3 !important;">
+                Hardtail-look mono-shock setup with a solo sprung seat, chopped fenders, and a raw bare-metal tank treated with clear ceramic coat.
+              </p>
+              <div class="d-flex gap-2 flex-wrap mb-4">
+                <span class="badge bg-dark border border-secondary text-light">1200cc V-Twin</span>
+                <span class="badge bg-dark border border-secondary text-light">Spoke Wheels</span>
+                <span class="badge bg-dark border border-secondary text-light">Solo Seat</span>
+              </div>
+            </div>
+            <a href="/contact" class="btn btn-retro-brass w-100 py-2">Inquire Build</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Quick Workshop Overview Banner -->
+  <div class="row align-items-center g-4 p-4 p-md-5 rounded-3 border border-secondary my-5" style="background-color: #171717;">
+    <div class="col-lg-8">
+      <span class="badge border border-warning text-warning text-uppercase mb-2" style="letter-spacing: 1.5px;">Precision Craft</span>
+      <h2 class="display-6 fw-bold text-light mb-3">Got An Old Frame Collecting Dust?</h2>
+      <p class="text-secondary mb-0" style="color: #c9c0b5 !important;">
+        Bring in your barn find or daily runner. We handle everything from complete chassis geometry redesigns and engine rebuilds to vintage tank restoration.
+      </p>
+    </div>
+    <div class="col-lg-4 text-lg-end">
+      <a href="/services" class="btn btn-retro-brass px-4 py-3 fs-5 w-100 w-lg-auto">
+        <i class="bi bi-tools me-2"></i>Our Services
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Rider Testimonials / Provenance -->
+  <div class="my-5 py-4">
+    <div class="text-center mb-5">
+      <span class="text-warning text-uppercase small" style="letter-spacing: 2px;">Word From The Road</span>
+      <h2 class="display-6 fw-bold text-light">Rider Dispatches</h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="p-4 rounded-3 border border-secondary h-100" style="background-color: #1c1c1c;">
+          <div class="d-flex text-warning mb-3">
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-light fst-italic mb-3">
+            "Shaon's crew took a rusted 1974 CB550 that had been sitting for two decades and turned it into a daily road missile. The sound and balance are pure magic."
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="rounded-circle border border-warning d-flex align-items-center justify-content-center text-warning fw-bold" style="width: 44px; height: 44px; background-color: #2b2b2b;">
+              TH
+            </div>
+            <div>
+              <h6 class="text-light mb-0">Tariq Hossain</h6>
+              <span class="small text-secondary">Owner, The Iron Ghost Build</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 rounded-3 border border-secondary h-100" style="background-color: #1c1c1c;">
+          <div class="d-flex text-warning mb-3">
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill me-1"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="text-light fst-italic mb-3">
+            "Genuine artisans. They don't cut corners with cheap aftermarket parts. Every bracket, weld, and tune is built with real motorcycle heritage in mind."
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <div class="rounded-circle border border-warning d-flex align-items-center justify-content-center text-warning fw-bold" style="width: 44px; height: 44px; background-color: #2b2b2b;">
+              AR
+            </div>
+            <div>
+              <h6 class="text-light mb-0">Asif Rahman</h6>
+              <span class="small text-secondary">Custom Scrambler Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

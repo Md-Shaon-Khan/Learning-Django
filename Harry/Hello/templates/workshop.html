@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Workshop &amp; Services{% endblock title %}
+
+{% block body %}
+<!-- Page Header -->
+<div class="position-relative py-5 border-bottom border-secondary" style="background: linear-gradient(rgba(17, 17, 17, 0.88), rgba(17, 17, 17, 0.95)), url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;">
+  <div class="container py-5 text-center">
+    <span class="badge border border-warning text-warning px-3 py-2 text-uppercase mb-3" style="letter-spacing: 2px;">
+      <i class="bi bi-tools me-1"></i> Precision Engineering
+    </span>
+    <h1 class="display-3 fw-bold text-light mb-3">Workshop &amp; Custom Services</h1>
+    <p class="fs-5 text-secondary col-md-8 mx-auto" style="color: #c9c0b5 !important;">
+      From bare-metal chassis fabrication to vintage multi-carb synchronisation, we treat every machine like a rolling work of art.
+    </p>
+  </div>
+</div>
+
+<div class="container my-5">
+  <!-- Core Services Grid -->
+  <div class="row g-4">
+    <!-- Service 1: Custom Builds -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-gear-wide-connected fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Bespoke Custom Builds</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Ground-up transformations for Café Racers, Scramblers, Trackers, and Bobbers. Custom subframes, handmade fuel tanks, and tailored rider geometry.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Frame de-tabbing &amp; hoop fabrication</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Hand-beaten aluminium &amp; steel tanks</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Bespoke stitched leather saddles</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Consult Build</a>
+      </div>
+    </div>
+
+    <!-- Service 2: Engine Overhauls -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-lightning-charge fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Engine Blueprinting &amp; Rebuilds</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Complete teardown and re-machining of classic parallel twins, inline fours, and single-cylinder thumpers to factory or high-compression specs.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Cylinder honing &amp; big-bore kits</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Multi-carb sonic cleaning &amp; jetting</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Modern electronic ignition upgrades</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Book Engine Service</a>
+      </div>
+    </div>
+
+    <!-- Service 3: Vintage Restoration -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-clock-history fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Period-Correct Restoration</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Preserving history with concourse-level precision. We source authentic vintage components or machine one-off parts to factory specs.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Original OEM paint code matching</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Chrome replating &amp; vapor blasting</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Full electrical loom rebuilding</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Start Restoration</a>
+      </div>
+    </div>
+
+    <!-- Service 4: Exhaust & Metal Fabrication -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-fire fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Exhaust &amp; Pipe Bending</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Custom stainless steel and titanium pie-cut header pipes, high-mount scrambler pipes, and tuned reverse-cone megaphone mufflers.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Hand TIG welded pie-cuts</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Internal baffling &amp; sound tuning</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Ceramic coating &amp; heat wraps</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Fabricate Exhaust</a>
+      </div>
+    </div>
+
+    <!-- Service 5: Suspension & Brakes -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-disc fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Chassis &amp; Handling Upgrades</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Modern handling meets vintage geometry. Inverted front fork swaps, braided brake lines, and custom laced spoked wheels.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Modern USD fork adaptations</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Disc conversions for drum brakes</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Custom rim truing &amp; lacing</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Upgrade Chassis</a>
+      </div>
+    </div>
+
+    <!-- Service 6: Maintenance & Tuning -->
+    <div class="col-md-6 col-lg-4">
+      <div class="p-4 rounded-3 border border-secondary h-100 d-flex flex-column justify-content-between" style="background-color: #1c1c1c;">
+        <div>
+          <div class="d-inline-flex p-3 rounded-2 border border-warning text-warning mb-3" style="background-color: #242424;">
+            <i class="bi bi-speedometer fs-2"></i>
+          </div>
+          <h3 class="text-light mb-3">Dyno Tuning &amp; Routine Care</h3>
+          <p class="text-secondary mb-4" style="color: #b5ada3 !important;">
+            Keep your vintage machine starting on the first kick. Comprehensive safety inspections, valve adjustments, and oil change services.
+          </p>
+          <ul class="list-unstyled text-light small mb-4">
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Valve clearances &amp; timing sync</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Fuel mixture &amp; AFR sensor tuning</li>
+            <li class="mb-2"><i class="bi bi-check2 text-warning me-2"></i>Road-readiness full checkup</li>
+          </ul>
+        </div>
+        <a href="/contact" class="btn btn-retro-outline w-100 py-2">Schedule Tune-Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- How The Workshop Works -->
+  <div class="p-5 rounded-3 border border-secondary my-5 text-center" style="background-color: #181818;">
+    <span class="badge border border-warning text-warning px-3 py-2 text-uppercase mb-2" style="letter-spacing: 2px;">
+      The Pipeline
+    </span>
+    <h2 class="display-6 fw-bold text-light mb-5">How We Build Your Machine</h2>
+    
+    <div class="row g-4 text-start">
+      <div class="col-md-3">
+        <h1 class="display-4 fw-bold text-warning mb-2">01</h1>
+        <h4 class="text-light">Consultation</h4>
+        <p class="text-secondary small">We discuss your vision, ergonomics, donor bike selection, and budget parameters.</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="display-4 fw-bold text-warning mb-2">02</h1>
+        <h4 class="text-light">Teardown</h4>
+        <p class="text-secondary small">Every bolt is logged, frame assessed, and engine block inspected for fatigue.</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="display-4 fw-bold text-warning mb-2">03</h1>
+        <h4 class="text-light">Fabrication</h4>
+        <p class="text-secondary small">Hand-shaping steel, precision welding, engine blueprinting, and electrical routing.</p>
+      </div>
+      <div class="col-md-3">
+        <h1 class="display-4 fw-bold text-warning mb-2">04</h1>
+        <h4 class="text-light">Shakedown</h4>
+        <p class="text-secondary small">Extensive road testing and dyno runs before handing the keys to your new ride.</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="/contact" class="btn btn-retro-brass px-4 py-3 fs-5">
+        <i class="bi bi-wrench me-2"></i>Commission Your Build Today
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock body %}

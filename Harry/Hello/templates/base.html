@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %} | Shaon's Custom Cycles &amp; Garage</title>
+
+    <!-- Google Fonts: Oswald (Headers) & Roboto Slab (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+      :root {
+        --retro-dark: #171717;       /* Cast iron / matte black */
+        --retro-panel: #222222;      /* Deep asphalt */
+        --retro-brass: #d4a373;      /* Vintage aged brass */
+        --retro-rust: #bc4749;       /* Heritage rust / dark crimson */
+        --retro-cream: #faedcd;      /* Weathered parchment / ivory */
+        --retro-border: #383838;
+      }
+
+      body {
+        font-family: 'Roboto Slab', serif;
+        background-color: var(--retro-dark);
+        color: var(--retro-cream);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1, h2, h3, h4, h5, h6, .brand-text {
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      /* Navbar */
+      .navbar-retro {
+        background-color: #111111;
+        border-bottom: 2px solid var(--retro-brass);
+        padding: 0.9rem 0;
+      }
+
+      .navbar-brand {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--retro-cream) !important;
+        letter-spacing: 2px;
+      }
+
+      .navbar-brand span {
+        color: var(--retro-brass);
+      }
+
+      .nav-link {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        color: #bbb !important;
+        text-transform: uppercase;
+        padding: 0.5rem 1.1rem !important;
+        transition: all 0.25s ease;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        color: var(--retro-brass) !important;
+        text-shadow: 0 0 8px rgba(212, 163, 115, 0.4);
+      }
+
+      /* Vintage Button Styles */
+      .btn-retro-brass {
+        background-color: var(--retro-brass);
+        border: 2px solid var(--retro-brass);
+        color: #111;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .btn-retro-brass:hover {
+        background-color: transparent;
+        color: var(--retro-brass);
+        border-color: var(--retro-brass);
+        box-shadow: 0 0 15px rgba(212, 163, 115, 0.35);
+      }
+
+      .btn-retro-outline {
+        background-color: transparent;
+        border: 2px solid var(--retro-cream);
+        color: var(--retro-cream);
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: all 0.25s ease;
+      }
+
+      .btn-retro-outline:hover {
+        background-color: var(--retro-cream);
+        color: #111;
+      }
+
+      /* Dropdown Menu */
+      .dropdown-menu {
+        background-color: var(--retro-panel);
+        border: 1px solid var(--retro-border);
+        border-top: 3px solid var(--retro-brass);
+        border-radius: 2px;
+        padding: 0.5rem;
+      }
+
+      .dropdown-item {
+        color: var(--retro-cream);
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 0.6rem 1.2rem;
+      }
+
+      .dropdown-item:hover {
+        background-color: #2b2b2b;
+        color: var(--retro-brass);
+      }
+
+      /* Search Bar */
+      .search-box input {
+        background-color: #1c1c1c;
+        border: 1px solid var(--retro-border);
+        color: var(--retro-cream);
+        border-radius: 4px;
+      }
+
+      .search-box input:focus {
+        background-color: #252525;
+        border-color: var(--retro-brass);
+        color: var(--retro-cream);
+        box-shadow: 0 0 0 2px rgba(212, 163, 115, 0.25);
+      }
+
+      main {
+        flex: 1;
+      }
+
+      footer {
+        background-color: #0d0d0d;
+        border-top: 1px solid var(--retro-border);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header / Navbar -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-retro">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center gap-2" href="{% url 'garage' %}">
+            <i class="bi bi-gear-wide-connected fs-2 text-warning"></i>
+            <span>Shaon's</span> Moto Co.
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button class="navbar-toggler border-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#motoNavbar" aria-controls="motoNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-2 text-warning"></i>
+          </button>
+
+          <!-- Nav Links -->
+          <div class="collapse navbar-collapse" id="motoNavbar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'garage' %}">Garage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'heritage' %}">Heritage</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Bikes &amp; Builds
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'garage' %}#featured-builds"><i class="bi bi-speedometer2 me-2 text-warning"></i>Café Racers</a></li>
+                  <li><a class="dropdown-item" href="{% url 'garage' %}#featured-builds"><i class="bi bi-compass me-2 text-warning"></i>Scramblers</a></li>
+                  <li><a class="dropdown-item" href="{% url 'garage' %}#featured-builds"><i class="bi bi-wrench-adjustable me-2 text-warning"></i>Bobbers &amp; Choppers</a></li>
+                  <li><hr class="dropdown-divider border-secondary"></li>
+                  <li><a class="dropdown-item text-warning" href="{% url 'workshop' %}">Custom Restorations</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'workshop' %}">Workshop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Search & Build CTA -->
+            <div class="d-flex align-items-center gap-3">
+              <form class="search-box d-none d-xl-block" role="search">
+                <input class="form-control" type="search" placeholder="Search parts / builds..." aria-label="Search">
+              </form>
+              <a href="{% url 'contact' %}" class="btn btn-retro-brass px-3 py-2">
+                <i class="bi bi-wrench me-1"></i> Book Build
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      {% block body %}
+      {% endblock body %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5 text-center text-muted">
+      <div class="container">
+        <p class="mb-1 text-light">&copy; 2026 Shaon's Custom Cycles &bull; Built For The Open Highway.</p>
+        <div class="d-flex justify-content-center gap-4 mt-3 fs-5">
+          <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

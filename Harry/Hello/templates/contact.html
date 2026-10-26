@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}Contact &amp; Workshop{% endblock title %}
+
+{% block body %}
+<div class="container my-5">
+  <!-- Page Header -->
+  <div class="text-center mb-5">
+    <span class="badge border border-warning text-warning px-3 py-2 text-uppercase mb-2" style="letter-spacing: 2px;">
+      <i class="bi bi-geo-alt-fill me-1"></i> Visit The Garage
+    </span>
+    <h1 class="display-4 fw-bold text-light">Drop By Or Book A Build</h1>
+    <p class="fs-5 text-secondary col-md-8 mx-auto">
+      Have a vintage bike that needs restoring, or looking to commission a custom build? Send us a transmission or roll into the workshop.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Contact Info Cards -->
+    <div class="col-lg-5">
+      <div class="p-4 p-md-5 rounded-3 border border-secondary h-100" style="background-color: #1c1c1c;">
+        <h3 class="text-warning mb-4"><i class="bi bi-wrench-adjustable me-2"></i>Garage Headquarters</h3>
+        
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <div class="fs-4 text-warning"><i class="bi bi-geo-alt"></i></div>
+          <div>
+            <h5 class="text-light mb-1">Location</h5>
+            <p class="text-secondary mb-0">74 Moto Alley, Old Industrial Belt<br>Dhaka, Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <div class="fs-4 text-warning"><i class="bi bi-telephone"></i></div>
+          <div>
+            <h5 class="text-light mb-1">Direct Line</h5>
+            <p class="text-secondary mb-0">+880 1700-000000<br>+880 1800-000000</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <div class="fs-4 text-warning"><i class="bi bi-envelope"></i></div>
+          <div>
+            <h5 class="text-light mb-1">Email Dispatch</h5>
+            <p class="text-secondary mb-0">garage@shaonsmoto.com</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 mb-4">
+          <div class="fs-4 text-warning"><i class="bi bi-clock"></i></div>
+          <div>
+            <h5 class="text-light mb-1">Wrenching Hours</h5>
+            <p class="text-secondary mb-0">Mon – Sat: 09:00 AM – 08:00 PM<br>Sunday: Track Day / Closed</p>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div>
+          <h6 class="text-uppercase text-light mb-3" style="letter-spacing: 1px;">Follow The Workshop</h6>
+          <div class="d-flex gap-3 fs-4">
+            <a href="#" class="text-warning text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-warning text-decoration-none"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-warning text-decoration-none"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & Consultation Form -->
+    <div class="col-lg-7">
+      <div class="p-4 p-md-5 rounded-3 border border-secondary" style="background-color: #1c1c1c;">
+        <h3 class="text-light mb-4">Transmit A Message</h3>
+        
+        <form method="post" action="/contact">
+          {% csrf_token %}
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Rider Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required style="background-color: #141414; border: 1px solid #383838; color: #faedcd;">
+            </div>
+
+            <div class="col-md-6">
+              <label for="email" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="john@example.com" required style="background-color: #141414; border: 1px solid #383838; color: #faedcd;">
+            </div>
+
+            <div class="col-md-6">
+              <label for="phone" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Contact Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+880 1..." style="background-color: #141414; border: 1px solid #383838; color: #faedcd;">
+            </div>
+
+            <div class="col-md-6">
+              <label for="service" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Inquiry Type</label>
+              <select class="form-select" id="service" name="service" style="background-color: #141414; border: 1px solid #383838; color: #faedcd;">
+                <option value="custom-build" selected>Custom Bike Build</option>
+                <option value="restoration">Vintage Restoration</option>
+                <option value="tuning">Engine Tuning &amp; Maintenance</option>
+                <option value="parts">Sourcing Rare Parts</option>
+                <option value="general">General Question</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="bikeDetails" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Bike Model &amp; Year (If applicable)</label>
+              <input type="text" class="form-control" id="bikeDetails" name="bike_details" placeholder="e.g., 1978 Yamaha SR400 / Honda CB750" style="background-color: #141414; border: 1px solid #383838; color: #faedcd;">
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label text-warning text-uppercase small" style="letter-spacing: 1px;">Project Details / Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about the project, specs, or budget..." required style="background-color: #141414; border: 1px solid #383838; color: #faedcd;"></textarea>
+            </div>
+
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn btn-retro-brass w-100 py-3 fs-5">
+                <i class="bi bi-send-fill me-2"></i>Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
